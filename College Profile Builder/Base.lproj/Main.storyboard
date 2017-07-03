@@ -57,7 +57,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Population" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QO8-Eo-xx7">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enrollment" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QO8-Eo-xx7">
                                 <rect key="frame" x="112" y="159" width="150" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="dpY-Ee-Vrn"/>
@@ -65,7 +65,7 @@
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YlS-IJ-h71">
                                 <rect key="frame" x="62" y="201" width="250" height="150"/>
@@ -81,6 +81,9 @@
                                     <constraint firstAttribute="height" constant="30" id="U5P-7s-GFZ"/>
                                 </constraints>
                                 <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="onTappedSaveButton:" destination="JEX-9P-axG" eventType="touchUpInside" id="3kH-L6-OHq"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -99,6 +102,12 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="College Details" id="mOI-FS-AaM"/>
+                    <connections>
+                        <outlet property="enrollmentTextField" destination="QO8-Eo-xx7" id="Z4s-Jg-1wY"/>
+                        <outlet property="imageView" destination="YlS-IJ-h71" id="1hw-wr-s63"/>
+                        <outlet property="locationTextField" destination="Svi-jE-6vS" id="LqG-aA-dxA"/>
+                        <outlet property="nameTextField" destination="KGI-ur-Jah" id="gyo-oO-UxF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FJe-Yq-33r" sceneMemberID="firstResponder"/>
             </objects>

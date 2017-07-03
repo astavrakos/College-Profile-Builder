@@ -15,6 +15,7 @@
 		63C3B90D1F0ABFEC00AC2B8C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63C3B90B1F0ABFEC00AC2B8C /* LaunchScreen.storyboard */; };
 		63C3B9181F0ABFEC00AC2B8C /* College_Profile_BuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C3B9171F0ABFEC00AC2B8C /* College_Profile_BuilderTests.swift */; };
 		63C3B9231F0ABFEC00AC2B8C /* College_Profile_BuilderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C3B9221F0ABFEC00AC2B8C /* College_Profile_BuilderUITests.swift */; };
+		63C3B9311F0AC02700AC2B8C /* College.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C3B9301F0AC02700AC2B8C /* College.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		63C3B91E1F0ABFEC00AC2B8C /* College Profile BuilderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "College Profile BuilderUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		63C3B9221F0ABFEC00AC2B8C /* College_Profile_BuilderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = College_Profile_BuilderUITests.swift; sourceTree = "<group>"; };
 		63C3B9241F0ABFEC00AC2B8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		63C3B9301F0AC02700AC2B8C /* College.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = College.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 		63C3B8F41F0ABFEC00AC2B8C = {
 			isa = PBXGroup;
 			children = (
+				63C3B9301F0AC02700AC2B8C /* College.swift */,
 				63C3B8FF1F0ABFEC00AC2B8C /* College Profile Builder */,
 				63C3B9161F0ABFEC00AC2B8C /* College Profile BuilderTests */,
 				63C3B9211F0ABFEC00AC2B8C /* College Profile BuilderUITests */,
@@ -265,6 +268,7 @@
 				63C3B9051F0ABFEC00AC2B8C /* DetailViewController.swift in Sources */,
 				63C3B9031F0ABFEC00AC2B8C /* MasterViewController.swift in Sources */,
 				63C3B9011F0ABFEC00AC2B8C /* AppDelegate.swift in Sources */,
+				63C3B9311F0AC02700AC2B8C /* College.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

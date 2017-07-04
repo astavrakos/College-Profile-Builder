@@ -62,6 +62,10 @@ class MasterViewController: UITableViewController {
             textField.keyboardType = UIKeyboardType.numberPad
         }
         
+        alert.addTextField{ (textField) in
+            textField.placeholder = "Website"
+        }
+        
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         alert.addAction(cancelAction)
         
@@ -69,6 +73,7 @@ class MasterViewController: UITableViewController {
             let nameTextField = alert.textFields! [0] as UITextField
             let locationTextField = alert.textFields! [1] as UITextField
             let enrollmentTextField = alert.textFields! [2] as UITextField
+            let siteTextField = alert.textFields! [3] as UITextField
             guard let image = UIImage(named: nameTextField.text!) else{
                 print ("missing \(nameTextField.text!) image")
                 return
@@ -77,7 +82,8 @@ class MasterViewController: UITableViewController {
                 let college = College(name: nameTextField.text!,
                                    location: locationTextField.text!,
                                     enrollment: enrollment,
-                                    image: UIImagePNGRepresentation(image)!)
+                                    image: UIImagePNGRepresentation(image)!,
+                                    website: siteTextField.text!)
                 self.objects.append(college)
                 try! self.realm.write {
                     self.realm.add(college)

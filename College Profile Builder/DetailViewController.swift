@@ -8,6 +8,7 @@
 
 import UIKit
 import RealmSwift
+import SafariServices
 
 class DetailViewController: UIViewController {
 
@@ -15,6 +16,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var locationTextField: UITextField!
     @IBOutlet weak var enrollmentTextField: UITextField!
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var siteTextField: UITextField!
     
     let realm = try! Realm()
     
@@ -32,6 +34,7 @@ class DetailViewController: UIViewController {
                 nameTextField.text = college.name
                 locationTextField.text = college.location
                 enrollmentTextField.text = String(college.enrollment)
+                siteTextField.text = college.website
                 imageView.image = UIImage(data: college.image)
             }
         }
@@ -59,7 +62,13 @@ class DetailViewController: UIViewController {
         }
     }
    
+    @IBAction func onGoTapped(_ sender: Any) {
+        let urlString = siteTextField.text!
+        let url = URL(string: urlString)
+        let svc = SFSafariViewController(url: url!)
+        present(svc, animated: true, completion: nil)
 
+    }
 
 }
 

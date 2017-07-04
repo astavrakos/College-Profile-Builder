@@ -10,13 +10,16 @@ import UIKit
 import RealmSwift
 import SafariServices
 
-class DetailViewController: UIViewController {
+class DetailViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate
+{
 
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var locationTextField: UITextField!
     @IBOutlet weak var enrollmentTextField: UITextField!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var siteTextField: UITextField!
+    
+    let imagePicker = UIImagePickerController()
     
     let realm = try! Realm()
     
@@ -42,8 +45,16 @@ class DetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         configureView()
+        imagePicker.delegate = self
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        imagePicker.dismiss(animated: true)
+        {
+            let selectedImage = info[UIImagePickerControllerOriginalImage] as! UIImage
+            self.imageView.image = selectedImage
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -69,6 +80,13 @@ class DetailViewController: UIViewController {
         present(svc, animated: true, completion: nil)
 
     }
+    
+    @IBAction func onChangeTapped(_ sender: Any)
+    {
+        imagePicker.sourceType = UIImagePickerControllerSourceType.photoLibrary
+        present(imagePicker, animated: true, completion: nil)
+    }
+    
 
 }
 

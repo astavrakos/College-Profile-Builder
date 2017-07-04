@@ -40,6 +40,19 @@ class MasterViewController: UITableViewController {
         super.viewWillAppear(animated)
         tableView.reloadData()
     }
+    
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if indexPath.row % 2 == 0
+        {
+        cell.backgroundColor = UIColor.white
+        }
+        else
+        {
+        cell.backgroundColor = UIColor.lightGray
+        }
+    }
+  
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

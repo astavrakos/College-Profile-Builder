@@ -20,6 +20,7 @@
 		63C3B9351F0ACABC00AC2B8C /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 63C3B9321F0ACABC00AC2B8C /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		63C3B9361F0ACABC00AC2B8C /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63C3B9331F0ACABC00AC2B8C /* RealmSwift.framework */; };
 		63C3B9371F0ACABC00AC2B8C /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 63C3B9331F0ACABC00AC2B8C /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		63C3BA221F0D5FD700AC2B8C /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C3BA211F0D5FD700AC2B8C /* MapViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,7 @@
 		63C3B9301F0AC02700AC2B8C /* College.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = College.swift; sourceTree = "<group>"; };
 		63C3B9321F0ACABC00AC2B8C /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
 		63C3B9331F0ACABC00AC2B8C /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
+		63C3BA211F0D5FD700AC2B8C /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +133,7 @@
 				63C3B9021F0ABFEC00AC2B8C /* MasterViewController.swift */,
 				63C3B9041F0ABFEC00AC2B8C /* DetailViewController.swift */,
 				63C3B9061F0ABFEC00AC2B8C /* Main.storyboard */,
+				63C3BA211F0D5FD700AC2B8C /* MapViewController.swift */,
 				63C3B9091F0ABFEC00AC2B8C /* Assets.xcassets */,
 				63C3B90B1F0ABFEC00AC2B8C /* LaunchScreen.storyboard */,
 				63C3B90E1F0ABFEC00AC2B8C /* Info.plist */,
@@ -294,6 +297,7 @@
 				63C3B9051F0ABFEC00AC2B8C /* DetailViewController.swift in Sources */,
 				63C3B9031F0ABFEC00AC2B8C /* MasterViewController.swift in Sources */,
 				63C3B9011F0ABFEC00AC2B8C /* AppDelegate.swift in Sources */,
+				63C3BA221F0D5FD700AC2B8C /* MapViewController.swift in Sources */,
 				63C3B9311F0AC02700AC2B8C /* College.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -547,6 +551,7 @@
 				63C3B9291F0ABFEC00AC2B8C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		63C3B92A1F0ABFEC00AC2B8C /* Build configuration list for PBXNativeTarget "College Profile BuilderTests" */ = {
 			isa = XCConfigurationList;
@@ -555,6 +560,7 @@
 				63C3B92C1F0ABFEC00AC2B8C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		63C3B92D1F0ABFEC00AC2B8C /* Build configuration list for PBXNativeTarget "College Profile BuilderUITests" */ = {
 			isa = XCConfigurationList;
@@ -563,6 +569,7 @@
 				63C3B92F1F0ABFEC00AC2B8C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

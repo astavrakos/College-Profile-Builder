@@ -88,7 +88,7 @@ class MasterViewController: UITableViewController {
             let enrollmentTextField = alert.textFields! [2] as UITextField
             let siteTextField = alert.textFields! [3] as UITextField
             guard let image = UIImage(named: nameTextField.text!) else{
-                print ("missing \(nameTextField.text!) image")
+                let image = UIImage(named: "default")
                 return
             }
             if let enrollment = Int(enrollmentTextField.text!){

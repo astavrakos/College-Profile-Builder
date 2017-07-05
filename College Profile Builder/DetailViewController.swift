@@ -19,6 +19,7 @@ class DetailViewController: UIViewController, UIImagePickerControllerDelegate, U
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var siteTextField: UITextField!
     
+    
     let imagePicker = UIImagePickerController()
     
     let realm = try! Realm()
@@ -85,6 +86,13 @@ class DetailViewController: UIViewController, UIImagePickerControllerDelegate, U
     {
         imagePicker.sourceType = UIImagePickerControllerSourceType.photoLibrary
         present(imagePicker, animated: true, completion: nil)
+    }
+    
+   
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let dvc = segue.destination as! MapViewController
+        dvc.location = nameTextField.text!
+
     }
     
 

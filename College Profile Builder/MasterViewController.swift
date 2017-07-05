@@ -87,15 +87,21 @@ class MasterViewController: UITableViewController {
             let locationTextField = alert.textFields! [1] as UITextField
             let enrollmentTextField = alert.textFields! [2] as UITextField
             let siteTextField = alert.textFields! [3] as UITextField
-            guard let image = UIImage(named: nameTextField.text!) else{
-                let image = UIImage(named: "default")
-                return
+            var myImage = UIImage()
+            if UIImage(named: nameTextField.text!) != nil
+            {
+                myImage = UIImage(named: nameTextField.text!)!
+            }
+            else
+            {
+                myImage = UIImage(named: "default")!
+                
             }
             if let enrollment = Int(enrollmentTextField.text!){
                 let college = College(name: nameTextField.text!,
                                    location: locationTextField.text!,
                                     enrollment: enrollment,
-                                    image: UIImagePNGRepresentation(image)!,
+                                    image: UIImagePNGRepresentation(myImage)!,
                                     website: siteTextField.text!)
                 self.objects.append(college)
                 try! self.realm.write {

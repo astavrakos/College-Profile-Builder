@@ -76,6 +76,7 @@ class MapViewController: UIViewController, UISearchBarDelegate {
         mapView.addAnnotation(pin)
         mapView.setRegion(region, animated: true)
     }
+    
     @IBAction func displaySearchBar(_ sender: Any) {
         let searchController = UISearchController(searchResultsController: nil)
         searchController.hidesNavigationBarDuringPresentation = false
